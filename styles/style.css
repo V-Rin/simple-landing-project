@@ -1,0 +1,326 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+/* Change of sizing model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Removing default margin */
+* {
+    margin: 0;
+}
+
+body {
+    /* Adding accessible line-height */
+    line-height: 1.5;
+    /* Improving text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Improving media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* Inheriting fonts for form controls */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Avoiding text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* Improving line wrapping */
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+/*
+    Creating a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+body {
+    background-color: #1F2937;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+}
+
+header,
+footer {
+    height: 10%;
+}
+
+header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 10px 8%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+header,
+.intro-section,
+footer {
+    background-color: #1F2937;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.logo,
+.intro-title {
+    color: #F9FAF8;
+    font-weight: 900;
+}
+
+.links,
+.intro-text {
+    color: #E5E7EB;
+    font-size: 18px;
+}
+
+.links ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1em;
+}
+
+.content {
+    height: 105vh;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.intro-section,
+.info-section,
+.quote-section,
+.action-section {
+    height: 45%;
+}
+
+.intro-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 5%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 3%;
+}
+
+.intro-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.intro-title {
+    font-size: 48px;
+}
+
+.intro-image {
+    width: 500px;
+    height: 250px;
+    background-color: gray;
+    text-align: center;
+    line-height: 250px;
+}
+
+.intro-button {
+    min-width: 210px;
+    width: 10%;
+    background-color: #3882F6;
+    color: #F9FAF8;
+    padding: 5px;
+    border-color: #3882F6;
+    border-radius: 5px;
+}
+
+.info-section {
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 10%;
+    padding: 3%;
+}
+
+.info-title {
+    font-size: 36px;
+    color: #1F2937;
+    font-weight: 900;
+    padding-bottom: 2%;
+}
+
+.info-item-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1%;
+}
+
+.info-item-image {
+    border: 3px solid #3882F6;
+    border-radius: 10px;
+    height: 150px;
+    width: 150px;
+    min-width: 150px;
+    margin-bottom: 3%;
+    justify-self: center;
+}
+
+.quote-section {
+    background-color: #E5E7EB;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 9% 18%;
+}
+
+
+.quote {
+    color: #1F2937;
+    font-size: 36px;
+    font-weight: light;
+    font-style: italic;
+    -ms-flex-item-align: center;
+    align-self: center;
+    padding: 0 0 10px 0;
+}
+
+.quote-author {
+    justify-self: end;
+}
+
+.quote-author,
+.action-title {
+    font-weight: bold;
+}
+
+.action-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: white;
+    padding: 5%;
+}
+
+.action-container {
+    display: flex;
+    border-radius: 5px;
+    height: 33%;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    padding: 2%;
+}
+
+.action-container,
+.action-button {
+    color: #F9FAF8;
+    background-color: #3882F6;
+}
+
+.action-text {
+    color: #E5E7EB;
+}
+
+.action-button {
+    height: 50%;
+    border-radius: 7px;
+    border-color: #F9FAF8;
+    box-shadow: none;
+    font-weight: bold;
+    padding: 2px 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 2vh;
+    color: #E5E7EB;
+}
